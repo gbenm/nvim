@@ -10,7 +10,6 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-
     use {
         'hoob3rt/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}

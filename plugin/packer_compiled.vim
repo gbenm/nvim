@@ -99,6 +99,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
+  ["nvim-bufferline.lua"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"

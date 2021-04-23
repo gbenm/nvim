@@ -20,6 +20,18 @@ utils.opt('o', 'wildmode', 'list:longest')
 utils.opt('w', 'number', true)
 utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
+utils.opt('w', 'colorcolumn', '90')
+utils.opt('o', 'history', 10000)
+
+cmd 'set undofile'
+utils.opt('o', 'undodir', '~/.local/share/nvim/undodir')
+
+-- TODO: conditional t_Co > 2
+cmd 'highlight white cterm=inverse gui=inverse'
+cmd 'match white /\\s\\+$/'
+cmd 'set listchars=trail:+'
 
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+
+
