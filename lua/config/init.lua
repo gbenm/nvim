@@ -1,4 +1,4 @@
 require('config.colorscheme')
 require('config.completion')
+require('config.nerdcommenter')
 
-vim.cmd 'packadd nerdcommenter'

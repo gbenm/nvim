@@ -25,7 +25,7 @@ utils.opt('w', 'colorcolumn', '90')
 utils.opt('o', 'history', 10000)
 
 cmd 'set undofile'
-utils.opt('o', 'undodir', '~/.local/share/nvim/undodir')
+utils.opt('o', 'undodir', vim.fn.stdpath('data') .. '/undodir')
 
 -- TODO: conditional t_Co > 2
 cmd 'highlight white cterm=inverse gui=inverse'
