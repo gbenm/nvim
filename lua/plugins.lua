@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
     -- Auto management
     use { 'wbthomason/packer.nvim', opt = true }
 
@@ -22,6 +22,9 @@ return require('packer').startup(function()
     use { 'euclidianAce/BetterLua.vim' } -- better highlight lua
     use { 'tjdevries/manillua.nvim' } -- fancy lua folds
 
+    -- Autocomplete
+    use { 'hrsh7th/nvim-compe' }
+
     -- NerdTree
     use { 'scrooloose/nerdtree' }
 
@@ -36,6 +39,15 @@ return require('packer').startup(function()
 
     -- using packer.nvim
     use { 'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons' }
+
+    -- Formatting
+    use { 'sbdchd/neoformat' }
+
+    -- Navigate between tabs
+    use { 'christoomey/vim-tmux-navigator' }
+
+    -- Comments
+    use { 'scrooloose/nerdcommenter' }
 
 end)
 

@@ -91,6 +91,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/manillua.nvim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
+  nerdcommenter = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nerdcommenter"
+  },
   nerdtree = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nerdtree"
@@ -102,6 +110,10 @@ _G.packer_plugins = {
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -139,6 +151,10 @@ _G.packer_plugins = {
   ["vim-surround"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
   }
 }
 
