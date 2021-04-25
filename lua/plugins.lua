@@ -4,6 +4,8 @@ return require('packer').startup(function(use)
 
     -- Theme :)
     use { 'folke/tokyonight.nvim' }
+    use { 'mhinz/vim-startify' }
+    -- use { 'glepnir/dashboard-nvim' }
 
     -- Fuzzy finder
     use {
@@ -18,12 +20,13 @@ return require('packer').startup(function(use)
     -- LSP
     use { 'tjdevries/nlua.nvim' }
     use { 'neovim/nvim-lspconfig' }
-    use { 'nvim-lua/completion-nvim' } -- autocompletation UX
     use { 'euclidianAce/BetterLua.vim' } -- better highlight lua
     use { 'tjdevries/manillua.nvim' } -- fancy lua folds
 
-    -- Autocomplete
-    use { 'hrsh7th/nvim-compe' }
+    -- completation
+    -- use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}
+    use { 'nvim-lua/completion-nvim' } -- autocompletation UX
+    -- use { 'hrsh7th/nvim-compe' }
 
     -- NerdTree
     use { 'scrooloose/nerdtree' }

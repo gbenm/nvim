@@ -1,6 +1,6 @@
 -- Your custom attach function for nvim-lspconfig goes here.
-local on_attach = function(_, bufnr)
-    require('completion').on_attach()
+local on_attach = function(client, bufnr)
+    require('completion').on_attach(client)
 
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -28,6 +28,10 @@ require('nlua.lsp.nvim').setup(lspconfig, {
   on_attach = on_attach,
 })
 
-lspconfig.pyls.setup{}
-lspconfig.clangd.setup{}
+lspconfig.pyls.setup{
+  on_attach = on_attach,
+}
+lspconfig.clangd.setup{
+  on_attach = on_attach,
+}
 
