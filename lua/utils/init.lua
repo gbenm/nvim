@@ -13,4 +13,8 @@ function utils.map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function utils.t(text)
+    return vim.api.nvim_replace_termcodes(text, true, true, true)
+end
+
 return utils

@@ -1,4 +1,4 @@
-Fuente para los iconos: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
+Fuente para los iconos: **DejaVu Sans Mono Bold Nerd Font Complete**
 
 ~/.local/share/fonts
 

@@ -29,5 +29,5 @@ require('nlua.lsp.nvim').setup(lspconfig, {
 })
 
 lspconfig.pyls.setup{}
-lspconfig.ccls.setup{}
+lspconfig.clangd.setup{}
 

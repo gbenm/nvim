@@ -23,14 +23,20 @@ utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
 utils.opt('w', 'colorcolumn', '90')
 utils.opt('o', 'history', 10000)
-
-cmd 'set undofile'
+utils.opt('o', 'undofile', true)
 utils.opt('o', 'undodir', vim.fn.stdpath('data') .. '/undodir')
 
--- TODO: conditional t_Co > 2
-cmd 'highlight white cterm=inverse gui=inverse'
-cmd 'match white /\\s\\+$/'
-cmd 'set listchars=trail:+'
+cmd [[
+highlight white cterm=inverse gui=inverse
+match white /\s\+$/
+autocmd FileType tex,txt,markdown set spelllang=es
+autocmd FileType tex,txt,markdown set spell
+]]
+
+if tonumber(vim.o.t_Co) <= 2 then
+utils.opt('o', 'listchars', 'trail:+')
+utils.opt('o', 'list', true)
+end
 
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
