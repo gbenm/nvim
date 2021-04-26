@@ -11,14 +11,14 @@ end
 
 -- @param config the configuration to setup
 function server.setup(config)
-    local vue = server.lspconfig.vue
+    local texlab = server.lspconfig.texlab
 
-    if vue then
-        vue.setup(server.utils.merge(conf, config))
+    if texlab then
+        texlab.setup(server.utils.merge(conf, config))
     else
         print [[
 Heey you need to install:
-    sudo npm install vls -g
+    https://github.com/latex-lsp/texlab/releases
         ]]
     end
 end

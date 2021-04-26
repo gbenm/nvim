@@ -38,10 +38,14 @@ require('lsp_lua.clangd').core(lspconfig, utils).setup {
     on_attach = on_attach,
 }
 
-require('lsp_lua.vue').core(lspconfig, utils).setup {
+require('lsp_lua.vls').core(lspconfig, utils).setup {
     on_attach = on_attach,
 }
 
 require('lsp_lua.tsserver').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
+
+require('lsp_lua.texlab').core(lspconfig, utils).setup {
     on_attach = on_attach,
 }
