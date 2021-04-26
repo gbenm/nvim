@@ -4,6 +4,7 @@ local cmd = vim.cmd
 local indent = 4
 
 cmd 'syntax enable'
+cmd 'filetype on'
 cmd 'filetype plugin indent on'
 utils.opt('b', 'expandtab', true)
 utils.opt('b', 'shiftwidth', indent)

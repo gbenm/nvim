@@ -52,6 +52,9 @@ return require('packer').startup(function(use)
     -- Comments
     use { 'scrooloose/nerdcommenter' }
 
+    -- Indent
+    use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
+
 end)
 
 

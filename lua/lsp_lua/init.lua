@@ -1,3 +1,4 @@
+local utils = require('utils')
 -- Your custom attach function for nvim-lspconfig goes here.
 local on_attach = function(client, bufnr)
     require('completion').on_attach(client)
@@ -24,14 +25,23 @@ local lspconfig = require 'lspconfig'
 
 -- To get builtin LSP running, do something like:
 -- NOTE: This replaces the calls where you would have before done `require('nvim_lsp').sumneko_lua.setup()`
-require('nlua.lsp.nvim').setup(lspconfig, {
-  on_attach = on_attach,
-})
 
-lspconfig.pyls.setup{
-  on_attach = on_attach,
-}
-lspconfig.clangd.setup{
-  on_attach = on_attach,
+require('lsp_lua.pyls').core(lspconfig, utils).setup {
+    on_attach = on_attach,
 }
 
+require('lsp_lua.nlua').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
+
+require('lsp_lua.clangd').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
+
+require('lsp_lua.vue').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
+
+require('lsp_lua.tsserver').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}

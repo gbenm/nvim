@@ -19,6 +19,31 @@ function utils.map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function utils.merge(...)
+    arg = {...}
+    local result = {}
+
+    for _,obj in ipairs(arg) do
+        for k,v in pairs(obj) do
+            result[k] = v
+        end
+    end
+    return result
+end
+
+function utils.onftype(type)
+    return {
+        Do = function (callback)
+            if vim.bo.filetype == type then
+                print('Tipo', type)
+                callback()
+            else
+                print(type, ':(')
+            end
+        end
+    }
+end
+
 function utils.t(text)
     return vim.api.nvim_replace_termcodes(text, true, true, true)
 end
