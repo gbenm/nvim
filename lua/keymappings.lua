@@ -7,7 +7,8 @@ utils.map('n', '<Leader>q', ':q<CR>')
 utils.map('n', '<Leader>w', ':w<CR>')
 utils.map('n', '<Leader>wq', ':wq<CR>')
 -- pt -> Project Tree
-utils.map('n', '<Leader>pt', ':NERDTreeToggle<CR>')
+-- utils.map('n', '<Leader>pt', ':NERDTreeToggle<CR>')
+utils.map('n', '<Leader>pt', ':NERDTreeFind<CR>')
 utils.map('v', '<tab>', '>gv')
 utils.map('v', '<s-tab>', '<gv')
 -- s -> eaSymotion
