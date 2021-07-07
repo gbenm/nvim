@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time("Luarocks path setup", true)
-local package_path_str = "/home/benyamin/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/benyamin/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/benyamin/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/benyamin/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/benyamin/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/root/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/root/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -73,92 +73,100 @@ time("Defining packer_plugins", true)
 _G.packer_plugins = {
   ["BetterLua.vim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/BetterLua.vim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/BetterLua.vim"
   },
   ["auto-pairs"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/auto-pairs"
+    path = "/root/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
   ["completion-nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/completion-nvim"
+  },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["manillua.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/manillua.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/manillua.nvim"
+  },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/monokai.nvim"
   },
   neoformat = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/neoformat"
+    path = "/root/.local/share/nvim/site/pack/packer/start/neoformat"
   },
   nerdcommenter = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nerdcommenter"
+    path = "/root/.local/share/nvim/site/pack/packer/start/nerdcommenter"
   },
   nerdtree = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nerdtree"
+    path = "/root/.local/share/nvim/site/pack/packer/start/nerdtree"
   },
   ["nlua.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-easymotion"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-easymotion"
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   },
   ["vim-startify"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-startify"
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-startify"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/vimtex"
   }
 }
 

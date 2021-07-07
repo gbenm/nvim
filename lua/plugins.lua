@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
     use { 'wbthomason/packer.nvim', opt = true }
 
     -- Theme :)
+    use { 'tanvirtin/monokai.nvim' }
     use { 'folke/tokyonight.nvim' }
     use { 'mhinz/vim-startify' }
     -- use { 'glepnir/dashboard-nvim' }
@@ -21,6 +22,7 @@ return require('packer').startup(function(use)
     use { 'tjdevries/nlua.nvim' }
     use { 'neovim/nvim-lspconfig' }
     use { 'euclidianAce/BetterLua.vim' } -- better highlight lua
+    use { 'dart-lang/dart-vim-plugin' } -- highlighting dart
     use { 'tjdevries/manillua.nvim' } -- fancy lua folds
 
     -- completation

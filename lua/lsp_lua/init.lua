@@ -18,7 +18,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-
+    buf_set_keymap('n', '<Leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
 end
 
 local lspconfig = require 'lspconfig'
@@ -49,3 +49,16 @@ require('lsp_lua.tsserver').core(lspconfig, utils).setup {
 require('lsp_lua.texlab').core(lspconfig, utils).setup {
     on_attach = on_attach,
 }
+
+require('lsp_lua.perlls').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
+
+require('lsp_lua.dartls').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
+
+-- Java language protocol fails
+-- require('lsp_lua.javals').core(lspconfig, utils).setup {
+    -- on_attach = on_attach,
+-- }

@@ -2,7 +2,7 @@ local utils = require('utils')
 local cmd = vim.cmd
 
 utils.opt('o', 'termguicolors', true)
-cmd [[colorscheme tokyonight]]
+cmd [[colorscheme monokai]]
 
 require'bufferline'.setup{}
 vim.g.tokyonight_style = "night"

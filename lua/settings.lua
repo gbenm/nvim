@@ -34,10 +34,10 @@ autocmd FileType tex,txt,markdown set spelllang=es
 autocmd FileType tex,txt,markdown set spell
 ]]
 
-if tonumber(vim.o.t_Co) <= 2 then
-utils.opt('o', 'listchars', 'trail:+')
-utils.opt('o', 'list', true)
-end
+-- if tonumber(vim.o.t_Co) <= 2 then
+-- utils.opt('o', 'listchars', 'trail:+')
+-- utils.opt('o', 'list', true)
+-- end
 
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
