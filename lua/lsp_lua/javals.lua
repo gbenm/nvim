@@ -1,7 +1,9 @@
 local s = {  }
 local server = {  }
 -- configuration of this plugin
-local conf = {  }
+local conf = {
+    cmd = {'/home/benyamin/apps/java-language-server/dist/lang_server_linux.sh'}
+}
 
 -- @param lspconfig the object obtain as require('lspconfig')
 -- @param utils the object obtain as require('lspconfig')

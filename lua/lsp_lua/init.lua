@@ -59,6 +59,6 @@ require('lsp_lua.dartls').core(lspconfig, utils).setup {
 }
 
 -- Java language protocol fails
--- require('lsp_lua.javals').core(lspconfig, utils).setup {
-    -- on_attach = on_attach,
--- }
+require('lsp_lua.javals').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+}
