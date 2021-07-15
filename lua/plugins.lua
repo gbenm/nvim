@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
     use { 'scrooloose/nerdcommenter' }
 
     -- Indent
-    use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
+    use { 'lukas-reineke/indent-blankline.nvim' }
 
     -- LaTeX
     use { 'lervag/vimtex' }

@@ -154,10 +154,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   },
-  ["vim-javacomplete2"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-javacomplete2"
-  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-startify"
