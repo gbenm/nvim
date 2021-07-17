@@ -11,7 +11,7 @@ end
 
 -- @param config the configuration to setup
 function server.setup(config)
-    local pyls = server.lspconfig.pyls
+    local pyls = server.lspconfig.pyright
 
     if pyls then
         pyls.setup(server.utils.merge(conf, config))

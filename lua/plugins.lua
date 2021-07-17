@@ -2,6 +2,9 @@ return require('packer').startup(function(use)
     -- Auto management
     use { 'wbthomason/packer.nvim', opt = true }
 
+    -- Tracking code
+    use { 'wakatime/vim-wakatime' }
+
     -- Theme :)
     use { 'tanvirtin/monokai.nvim' }
     use { 'folke/tokyonight.nvim' }

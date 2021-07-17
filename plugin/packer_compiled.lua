@@ -166,6 +166,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
   },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-wakatime"
+  },
   vimtex = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vimtex"
