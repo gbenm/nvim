@@ -5,11 +5,16 @@ return require('packer').startup(function(use)
     -- Tracking code
     use { 'wakatime/vim-wakatime' }
 
+    -- Tree Sitter for improve parsing
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
     -- Theme :)
     use { 'tanvirtin/monokai.nvim' }
     use { 'folke/tokyonight.nvim' }
     use { 'mhinz/vim-startify' }
-    -- use { 'glepnir/dashboard-nvim' }
 
     -- Fuzzy finder
     use {
