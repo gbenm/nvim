@@ -35,14 +35,15 @@ return require('packer').startup(function(use)
 
     -- completation
     -- use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}
-    use { 'nvim-lua/completion-nvim' } -- autocompletation UX
-    -- use { 'hrsh7th/nvim-compe' }
+    -- use { 'nvim-lua/completion-nvim' } -- autocompletation UX
+    use { 'hrsh7th/nvim-compe' }
 
     -- NerdTree
     use { 'scrooloose/nerdtree' }
 
     -- Auto pairs (), [], {}, ...
     use { 'jiangmiao/auto-pairs' }
+    use { 'windwp/nvim-autopairs' }
 
     -- Work with parenthesis, etc
     use { 'tpope/vim-surround' }
