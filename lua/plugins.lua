@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
 
     -- Theme :)
     use { 'tanvirtin/monokai.nvim' }
-    use { 'folke/tokyonight.nvim' }
+    -- use { 'folke/tokyonight.nvim' }
     use { 'mhinz/vim-startify' }
 
     -- Fuzzy finder

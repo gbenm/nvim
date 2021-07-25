@@ -113,6 +113,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
