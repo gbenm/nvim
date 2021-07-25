@@ -28,6 +28,7 @@ utils.opt('o', 'undofile', true)
 utils.opt('o', 'undodir', vim.fn.stdpath('data') .. '/undodir')
 
 cmd [[
+highlight Normal ctermbg=black guibg=#1e1e1e
 highlight white cterm=inverse gui=inverse
 match white /\s\+$/
 autocmd FileType tex,txt,markdown set spelllang=es
