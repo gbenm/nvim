@@ -11,15 +11,14 @@ end
 
 -- @param config the configuration to setup
 function server.setup(config)
-    local perlls = server.lspconfig.perlls
+    local perlls = server.lspconfig.perlpls
 
     if perlls then
         perlls.setup(server.utils.merge(conf, config))
     else
         print [[
 Heey you need to install:
-    perl -MCPAN -e shell
-    install Perl::LanguageServer
+        cpan PLS
         ]]
     end
 end
