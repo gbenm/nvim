@@ -1,15 +1,15 @@
 local utils = require('utils')
 
 local cmd = vim.cmd
--- local indent = 4
+local indent = 4
 
 cmd 'syntax enable'
 cmd 'filetype on'
 cmd 'filetype plugin indent on'
 utils.opt('b', 'expandtab', true)
--- utils.opt('b', 'shiftwidth', indent)
+utils.opt('b', 'shiftwidth', indent)
 utils.opt('b', 'smartindent', true)
--- utils.opt('b', 'tabstop', indent)
+utils.opt('b', 'tabstop', indent)
 utils.opt('o', 'hidden', true)
 utils.opt('o', 'mouse', 'a')
 utils.opt('o', 'ignorecase', true)
