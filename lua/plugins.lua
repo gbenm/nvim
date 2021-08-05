@@ -2,6 +2,9 @@ return require('packer').startup(function(use)
     -- Auto management
     use { 'wbthomason/packer.nvim', opt = true }
 
+    -- EditorConfig
+    use { 'editorconfig/editorconfig-vim' }
+
     -- Tracking code
     use { 'wakatime/vim-wakatime' }
 
