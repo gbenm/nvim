@@ -1,7 +1,7 @@
 local utils = require('utils')
 -- Your custom attach function for nvim-lspconfig goes here.
 local on_attach = function(client, bufnr)
-    -- require('nvim-compe').on_attach(client)
+    require('nvim-compe').on_attach(client)
 
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end

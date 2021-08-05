@@ -33,6 +33,7 @@ highlight white cterm=inverse gui=inverse
 match white /\s\+$/
 autocmd FileType tex,txt,markdown set spelllang=es
 autocmd FileType tex,txt,markdown set spell
+let g:kite_supported_languages = ['typescript', 'javascript', 'go']
 ]]
 
 -- if tonumber(vim.o.t_Co) <= 2 then
