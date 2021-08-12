@@ -17,5 +17,7 @@ utils.map('n', '<Leader>s', '<Plug>(easymotion-s2)', { noremap = false })
 utils.map('n', '<C-N>', ':bn<CR>')
 utils.map('n', '<C-P>', ':bp<CR>')
 utils.map('n', '<Leader>bd', ':bdelete<CR>')
-
+-- code actions
+utils.map('n', '<Leader>co', ':Lspsaga code_action<CR>')
+utils.map('v', '<Leader>co', ':<C-U>Lspsaga range_code_action<CR>')
 

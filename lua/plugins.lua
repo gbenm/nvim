@@ -15,8 +15,8 @@ return require('packer').startup(function(use)
     }
 
     -- Theme :)
-    use { 'tanvirtin/monokai.nvim' }
-    -- use { 'folke/tokyonight.nvim' }
+    -- use { 'tanvirtin/monokai.nvim' }
+    use { 'folke/tokyonight.nvim' }
     use { 'mhinz/vim-startify' }
 
     -- Fuzzy finder
@@ -39,14 +39,28 @@ return require('packer').startup(function(use)
     -- completation
     -- use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}
     -- use { 'nvim-lua/completion-nvim' } -- autocompletation UX
-    use { 'hrsh7th/nvim-compe' }
+    use {
+        'hrsh7th/nvim-compe',
+    }
 
     -- NerdTree
     use { 'scrooloose/nerdtree' }
 
     -- Auto pairs (), [], {}, ...
     use { 'jiangmiao/auto-pairs' }
-    use { 'windwp/nvim-autopairs' }
+    use {
+        'windwp/nvim-autopairs',
+    }
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        event = "BufRead",
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
+
+    use { 'glepnir/lspsaga.nvim' }
 
     -- Work with parenthesis, etc
     use { 'tpope/vim-surround' }

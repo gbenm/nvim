@@ -41,48 +41,48 @@ require'lspconfig'.rust_analyzer.setup {
 -- To get builtin LSP running, do something like:
 -- NOTE: This replaces the calls where you would have before done `require('nvim_lsp').sumneko_lua.setup()`
 
-require('lsp_lua.pyls').core(lspconfig, utils).setup {
+require('lsp.pyls').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.nlua').core(lspconfig, utils).setup {
+require('lsp.nlua').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.clangd').core(lspconfig, utils).setup {
+require('lsp.clangd').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.vls').core(lspconfig, utils).setup {
+require('lsp.vls').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.tsserver').core(lspconfig, utils).setup {
+require('lsp.tsserver').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.texlab').core(lspconfig, utils).setup {
+require('lsp.texlab').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.perlls').core(lspconfig, utils).setup {
+require('lsp.perlls').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
-require('lsp_lua.dartls').core(lspconfig, utils).setup {
+require('lsp.dartls').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
 -- Java language protocol fails
-require('lsp_lua.javals').core(lspconfig, utils).setup {
+require('lsp.javals').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }

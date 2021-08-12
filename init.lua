@@ -30,5 +30,5 @@ require 'config'
 require 'settings'
 
 -- Setup Lua Languages server using submodule
-require 'lsp_lua'
+require 'lsp'
 

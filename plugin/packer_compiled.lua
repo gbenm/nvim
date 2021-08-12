@@ -81,6 +81,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
   },
+  ["editorconfig-vim"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
+  },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
@@ -92,10 +102,6 @@ _G.packer_plugins = {
   ["manillua.nvim"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/manillua.nvim"
-  },
-  ["monokai.nvim"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/monokai.nvim"
   },
   neoformat = {
     loaded = true,
@@ -114,16 +120,22 @@ _G.packer_plugins = {
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
   ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    load_after = {
+      ["nvim-compe"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/opt/nvim-autopairs"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
   ["nvim-compe"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    after = { "nvim-autopairs" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/opt/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -154,6 +166,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
   ["vim-easymotion"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-easymotion"
@@ -181,6 +197,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

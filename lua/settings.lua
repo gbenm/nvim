@@ -19,13 +19,15 @@ utils.opt('o', 'smartcase', true)
 utils.opt('o', 'splitbelow', true)
 utils.opt('o', 'splitright', true)
 utils.opt('o', 'wildmode', 'list:longest')
-utils.opt('w', 'number', true)
-utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
-utils.opt('w', 'colorcolumn', '90')
 utils.opt('o', 'history', 10000)
 utils.opt('o', 'undofile', true)
 utils.opt('o', 'undodir', vim.fn.stdpath('data') .. '/undodir')
+utils.opt('w', 'number', true)
+utils.opt('w', 'relativenumber', true)
+utils.opt('w', 'cursorline', true)
+utils.opt('w', 'colorcolumn', '90')
+utils.opt('w', 'wrap', false)
 
 cmd [[
 highlight Normal ctermbg=black guibg=#1e1e1e
