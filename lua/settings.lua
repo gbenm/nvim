@@ -35,7 +35,8 @@ highlight white cterm=inverse gui=inverse
 match white /\s\+$/
 autocmd FileType tex,txt,markdown setlocal spelllang=es,en
 autocmd FileType tex,txt,markdown setlocal spell
-let g:kite_supported_languages = []
+autocmd Filetype * AnyFoldActivate
+set foldlevel=99
 ]]
 
 -- if tonumber(vim.o.t_Co) <= 2 then

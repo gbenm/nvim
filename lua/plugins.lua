@@ -2,6 +2,9 @@ return require('packer').startup(function(use)
     -- Auto management
     use { 'wbthomason/packer.nvim', opt = true }
 
+    -- folding
+    use { 'pseewald/vim-anyfold' }
+
     -- EditorConfig
     use { 'editorconfig/editorconfig-vim' }
 
