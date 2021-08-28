@@ -1,4 +1,9 @@
-return require('packer').startup(function(use)
+local packer = require('packer')
+
+packer.config.git.clone_timeout = 600;
+packer.reset()
+
+return packer.startup(function(use)
     -- Auto management
     use { 'wbthomason/packer.nvim', opt = true }
 
@@ -38,6 +43,10 @@ return require('packer').startup(function(use)
     use { 'euclidianAce/BetterLua.vim' } -- better highlight lua
     use { 'dart-lang/dart-vim-plugin' } -- highlighting dart
     use { 'tjdevries/manillua.nvim' } -- fancy lua folds
+
+    -- AI
+    -- use { 'codota/tabnine-vim' }
+    use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
 
     -- completation
     -- use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}

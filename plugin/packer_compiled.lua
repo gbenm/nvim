@@ -167,6 +167,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
+  ["vim-anyfold"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-anyfold"
+  },
   ["vim-easymotion"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-easymotion"
