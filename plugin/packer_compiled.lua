@@ -77,6 +77,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
+  ["compe-tabnine"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/compe-tabnine"
+  },
   ["dart-vim-plugin"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
@@ -84,6 +88,10 @@ _G.packer_plugins = {
   ["editorconfig-vim"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = false,
