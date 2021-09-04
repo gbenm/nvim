@@ -43,7 +43,7 @@ return packer.startup(function(use)
     use { 'euclidianAce/BetterLua.vim' } -- better highlight lua
     use { 'dart-lang/dart-vim-plugin' } -- highlighting dart
     use { 'tjdevries/manillua.nvim' } -- fancy lua folds
-    use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+    use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     -- Debugger
     use { 'mfussenegger/nvim-dap' }

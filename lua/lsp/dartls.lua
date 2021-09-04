@@ -17,6 +17,7 @@ function server.setup(config)
 
     if dartls then
         dartls.setup(server.utils.merge(conf, config))
+        require("flutter-tools").setup{} -- use defaults
     else
         print [[
 Heey you need to install: dart
