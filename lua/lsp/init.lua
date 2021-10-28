@@ -86,3 +86,8 @@ require('lsp.javals').core(lspconfig, utils).setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
+
+require('lsp.yamlls').core(lspconfig, utils).setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}

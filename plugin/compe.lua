@@ -18,7 +18,7 @@ compe.setup {
     nvim_lsp = true;
     buffer = true;
     calc = true;
-    tabnine = true;
+    -- tabnine = true;
   };
 }
 

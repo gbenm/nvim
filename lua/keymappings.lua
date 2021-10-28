@@ -20,4 +20,7 @@ utils.map('n', '<Leader>bd', ':bdelete<CR>')
 -- code actions
 utils.map('n', '<Leader>co', ':Lspsaga code_action<CR>')
 utils.map('v', '<Leader>co', ':<C-U>Lspsaga range_code_action<CR>')
-
+utils.map('n', '<Leader>tl', ':TodoTrouble<CR>')
+-- Dashboard
+utils.map('n', '<Leader>ss', ':SessionSave<CR>', {noremap = false})
+utils.map('n', '<Leader>sl', ':SessionLoad<CR>', {noremap = false})

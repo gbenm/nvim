@@ -73,17 +73,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/BetterLua.vim"
   },
-  ["auto-pairs"] = {
+  ["aw-watcher-vim"] = {
     loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/auto-pairs"
-  },
-  ["compe-tabnine"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/compe-tabnine"
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/aw-watcher-vim"
   },
   ["dart-vim-plugin"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/dart-vim-plugin"
+  },
+  ["dashboard-nvim"] = {
+    config = { "\27LJ\2\n…\3\0\0\3\1\5\0\b6\0\0\0009\0\1\0'\1\3\0=\1\2\0-\0\0\0'\2\4\0B\0\2\1K\0\1\0\0\0³\2      let g:dashboard_custom_shortcut={\n\\ 'last_session'       : 'SPC s l',\n\\ 'find_history'       : 'SPC f h',\n\\ 'find_file'          : 'SPC f f',\n\\ 'new_file'           : 'SPC c n',\n\\ 'change_colorscheme' : 'SPC t c',\n\\ 'find_word'          : 'SPC f a',\n\\ 'book_marks'         : 'SPC f b',\n\\ }\n      \14telescope dashboard_default_executive\6g\bvim\0" },
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
   ["editorconfig-vim"] = {
     loaded = true,
@@ -175,9 +176,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-anyfold"] = {
     loaded = true,
@@ -186,10 +197,6 @@ _G.packer_plugins = {
   ["vim-easymotion"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-easymotion"
-  },
-  ["vim-startify"] = {
-    loaded = true,
-    path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-startify"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -210,6 +217,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: dashboard-nvim
+time([[Config for dashboard-nvim]], true)
+try_loadstring("\27LJ\2\n…\3\0\0\3\1\5\0\b6\0\0\0009\0\1\0'\1\3\0=\1\2\0-\0\0\0'\2\4\0B\0\2\1K\0\1\0\0\0³\2      let g:dashboard_custom_shortcut={\n\\ 'last_session'       : 'SPC s l',\n\\ 'find_history'       : 'SPC f h',\n\\ 'find_file'          : 'SPC f f',\n\\ 'new_file'           : 'SPC c n',\n\\ 'change_colorscheme' : 'SPC t c',\n\\ 'find_word'          : 'SPC f a',\n\\ 'book_marks'         : 'SPC f b',\n\\ }\n      \14telescope dashboard_default_executive\6g\bvim\0", "config", "dashboard-nvim")
+time([[Config for dashboard-nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
