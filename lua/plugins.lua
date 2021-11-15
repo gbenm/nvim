@@ -32,6 +32,7 @@ return packer.startup(function(use)
   -- Fuzzy finder
   use {
       'nvim-telescope/telescope.nvim',
+      commit = '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
   use {

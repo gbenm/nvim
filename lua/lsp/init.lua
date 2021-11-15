@@ -1,7 +1,7 @@
 local utils = require('utils')
+
 -- Your custom attach function for nvim-lspconfig goes here.
 local on_attach = function(_, bufnr)
-  require('lspsaga').init_lsp_saga()
 
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -98,3 +98,6 @@ require('lsp.kotlinls').core(lspconfig, utils).setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
+
+require('lspsaga').init_lsp_saga()
