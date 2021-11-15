@@ -15,7 +15,6 @@ return packer.startup(function(use)
 
   -- Tracking code
   use { 'wakatime/vim-wakatime' }
-  use { 'ActivityWatch/aw-watcher-vim' }
 
   -- Tree Sitter for improve parsing
   use {
@@ -25,8 +24,9 @@ return packer.startup(function(use)
 
   -- Theme :)
   -- use { 'tanvirtin/monokai.nvim' }
-  use { 'folke/tokyonight.nvim' }
+  -- use { 'folke/tokyonight.nvim' }
   -- use { 'Mofiqul/vscode.nvim' }
+  use 'marko-cerovac/material.nvim'
   use { 'glepnir/dashboard-nvim' }
 
   -- Fuzzy finder
@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins'}
   -- use { 'nvim-lua/completion-nvim' } -- autocompletation UX
   use {
-      'hrsh7th/nvim-compe',
+    'hrsh7th/nvim-compe',
   }
 
   -- NerdTree
@@ -67,15 +67,15 @@ return packer.startup(function(use)
   -- Auto pairs (), [], {}, ...
   -- use { 'jiangmiao/auto-pairs' }
   use {
-      'windwp/nvim-autopairs',
+    'windwp/nvim-autopairs',
   }
 
   use {
-      'lewis6991/gitsigns.nvim',
-      event = "BufRead",
-      requires = {
-          'nvim-lua/plenary.nvim'
-      }
+    'lewis6991/gitsigns.nvim',
+    event = "BufRead",
+    requires = {
+        'nvim-lua/plenary.nvim'
+    }
   }
 
   -- Code actions
