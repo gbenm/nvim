@@ -32,7 +32,6 @@ return packer.startup(function(use)
   -- Fuzzy finder
   use {
       'nvim-telescope/telescope.nvim',
-      commit = '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
   use {
@@ -80,7 +79,8 @@ return packer.startup(function(use)
   }
 
   -- Code actions
-  use { 'glepnir/lspsaga.nvim' }
+  -- use { 'glepnir/lspsaga.nvim' } -- de momento no es compatible con 0.5.1
+  use { 'tami5/lspsaga.nvim', branch = 'nvim51' }
 
   -- Work with parenthesis, etc
   use { 'tpope/vim-surround' }
