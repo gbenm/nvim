@@ -1,4 +1,9 @@
-vim.g.mapleader = ' '
+-- cambiar leader a ; (muchos plugins usan espacio por
+-- lo que hay incompatibilidad)
+-- Lo primero en cargarse va ser los temas
+
+
+vim.g.mapleader = ';'
 
 local fn = vim.fn
 local execute = vim.api.nvim_command

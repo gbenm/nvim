@@ -80,7 +80,7 @@ return packer.startup(function(use)
 
   -- Code actions
   -- use { 'glepnir/lspsaga.nvim' } -- de momento no es compatible con 0.5.1
-  use { 'tami5/lspsaga.nvim', branch = 'nvim51' }
+  use { 'tami5/lspsaga.nvim' }
 
   -- Work with parenthesis, etc
   use { 'tpope/vim-surround' }
