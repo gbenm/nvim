@@ -1,12 +1,11 @@
 -- cambiar leader a ; (muchos plugins usan espacio por
 -- lo que hay incompatibilidad)
 -- Lo primero en cargarse va ser los temas
-
-
 vim.g.mapleader = ';'
 
-local fn = vim.fn
-local execute = vim.api.nvim_command
+local fn = vim.fn;
+local execute = vim.api.nvim_command;
+local cmd = vim.cmd
 
 -- Auto install packer.nvim
 local packer_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
@@ -23,17 +22,17 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 -- ]]
 
 -- Install Plugins
-require 'plugins'
+-- require 'plugins'
 
 -- Key mappings
-require 'keymappings'
+-- require 'keymappings'
 
 -- Another option is to groups configuration is one folder
-require 'config'
+-- require 'config'
 
 -- Sensible defaults
-require 'settings'
+-- require 'settings'
 
 -- Setup Lua Languages server using submodule
-require 'lsp'
+-- require 'lsp'
 
