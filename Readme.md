@@ -5,3 +5,4 @@ Fuente para los iconos: **DejaVu Sans Mono Bold Nerd Font Complete**
 Se necesita instalar los LSP:
 - https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
 - pip install python-language-server
+Puede ver el resto dentro de la carpeta lsp
