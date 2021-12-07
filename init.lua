@@ -14,34 +14,14 @@ local packer_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 if fn.empty(fn.glob(packer_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim ' .. packer_path)
   cmd "packadd packer.nvim"
-  require("packer")
+  require "packer"
   cmd "PackerInstall"
 else
+  require "config.settings"
+  require "config.appearance"
 
-
-
+  cmd [[
+    packadd packer.nvim
+    autocmd BufWritePost plugins.lua PackerCompile
+  ]]
 end
-
-vim.cmd [[packadd packer.nvim]]
--- Compile if add a plugin
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
-
--- vim.cmd [[
--- autocmd CursorHold,CursorHoldI * lua require('code_action_utils').code_action_listener()
--- ]]
-
--- Install Plugins
--- require 'plugins'
-
--- Key mappings
--- require 'keymappings'
-
--- Another option is to groups configuration is one folder
--- require 'config'
-
--- Sensible defaults
--- require 'settings'
-
--- Setup Lua Languages server using submodule
--- require 'lsp'
-
