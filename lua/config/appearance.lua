@@ -3,7 +3,6 @@ local cmd = vim.cmd
 
 tools.opt('o', 'termguicolors', true)
 
-require'bufferline'.setup{}
 
 vim.g.material_style = "deep ocean"
 cmd [[colorscheme material]]
@@ -16,3 +15,7 @@ require('lualine').setup {
     extensions = { 'nerdtree' }
   }
 }
+
+cmd "packadd nvim-web-devicons"
+require "nvim-web-devicons"
+require("bufferline").setup{}

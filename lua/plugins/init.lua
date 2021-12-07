@@ -16,7 +16,9 @@ use {
 }
 use {
   "akinsho/nvim-bufferline.lua",
-  requires = "kyazdani42/nvim-web-devicons"
+  requires = {"kyazdani42/nvim-web-devicons", opt = true}
 }
+
+use { "kyazdani42/nvim-web-devicons", opt = true }
 ----------------------------------------
 
