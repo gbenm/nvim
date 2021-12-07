@@ -19,6 +19,7 @@ if fn.empty(fn.glob(packer_path)) > 0 then
 else
   require "config.settings"
   require "config.appearance"
+  require "shortcuts.plugins"
 
   cmd [[
     packadd packer.nvim
