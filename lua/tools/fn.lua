@@ -8,6 +8,7 @@ local lt = require("tools.list")
 -- @param mapper (value, key?) -> any
 -- @return table
 function fn.map(tbl, mapper)
+  if not tbl or not mapper then return end
   local ntable = {}
 
   for key, value in pairs(tbl) do
@@ -23,6 +24,8 @@ end
 -- @param mapper (value, key?) -> nil
 -- @return nil
 function fn.foreach(tbl, f)
+  if not tbl or not f then return end
+
   for key, value in pairs(tbl) do
     f(value, key)
   end
@@ -33,6 +36,8 @@ end
 -- @param tbl table
 -- @return table
 function fn.reverse(tbl)
+  if not tbl then return end
+
   local ntable = {}
   local size = #tbl
 
@@ -47,6 +52,9 @@ end
 -- argumentos a trozos.
 --
 -- @param func Función objetivo
+-- @param argsmin number el minimo número
+-- de argumentos para que se ejecute la llamada, si
+-- se deja en nil debe proveer todos los argumentos
 --
 -- # Ejemplo:
 --
@@ -58,11 +66,11 @@ end
 -- local foo3 = foo2(arg2)
 -- foo3(arg3) -- Esto también está bien
 -- ```
-function fn.curry(func)
+function fn.curry(func, argsmin)
   if not func then return end
 
 ---@diagnostic disable-next-line: undefined-field
-  local nparams = debug.getinfo(func).nparams
+  local nparams = argsmin or debug.getinfo(func).nparams
 
   local function _curry(...)
     local args = {...}
@@ -78,7 +86,5 @@ function fn.curry(func)
 
   return _curry
 end
-
-fn.curry()
 
 return fn
