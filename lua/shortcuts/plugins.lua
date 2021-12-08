@@ -11,3 +11,4 @@ local vmap = holdMode('v')
 
 nmap('<Leader>pt', ':NVtreeOpen<CR>')
 nmap('<Leader>s', '<Plug>(easymotion-s2)', { noremap = false })
+nmap('<Leader>tl', ':TodoTrouble<CR>')
