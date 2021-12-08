@@ -4,7 +4,7 @@ local use = packer.use
 packer.init()
 packer.reset()
 
-use { "wbthomason/packer.nvim", opt = true }
+use { "wbthomason/packer.nvim", opt = true, }
 use { "editorconfig/editorconfig-vim" }
 
 ----------------------------------------
@@ -21,4 +21,6 @@ use {
 
 use { "kyazdani42/nvim-web-devicons", opt = true }
 ----------------------------------------
+
+use { 'scrooloose/nerdtree', opt = true }
 

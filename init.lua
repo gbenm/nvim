@@ -10,9 +10,9 @@ local cmd = vim.cmd
 require "shortcuts.minimal"
 
 -- Auto install packer.nvim
-local packer_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
+local packer_path = fn.stdpath("data") .. "/site/pack/packer/opt/packer.nvim"
 if fn.empty(fn.glob(packer_path)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim ' .. packer_path)
+  execute("!git clone https://github.com/wbthomason/packer.nvim " .. packer_path)
   cmd "packadd packer.nvim"
   require "plugins"
   cmd "PackerInstall"
@@ -21,8 +21,8 @@ else
   require "config.appearance"
   require "shortcuts.plugins"
 
-  cmd [[
-    packadd packer.nvim
-    autocmd BufWritePost plugins.lua PackerCompile
-  ]]
+  require "config.commands"
+  --cmd ("autocmd BufWritePost ".. configPath .."/lua/plugins/init.lua NVpackerCompile")
+  cmd ("autocmd NV BufWritePost init.lua NVpackerCompile")
+
 end

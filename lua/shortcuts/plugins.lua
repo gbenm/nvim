@@ -9,4 +9,5 @@ local nmap = holdMode('n')
 local imap = holdMode('i')
 local vmap = holdMode('v')
 
-nmap('<Leader>pt', ':NERDTreeFind<CR>')
+nmap('<Leader>pt', ':NVtreeOpen<CR>')
+nmap('<Leader>s', '<Plug>(easymotion-s2)', { noremap = false })

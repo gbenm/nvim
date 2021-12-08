@@ -84,6 +84,12 @@ _G.packer_plugins = {
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  nerdtree = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/opt/nerdtree",
+    url = "https://github.com/scrooloose/nerdtree"
+  },
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
