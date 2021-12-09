@@ -233,6 +233,13 @@ _G.packer_plugins = {
     path = "/home/benyamin/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
   },
+  ["vim-wakatime"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/benyamin/.local/share/nvim/site/pack/packer/opt/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
+  },
   vimtex = {
     loaded = false,
     needs_bufread = true,
@@ -259,6 +266,7 @@ vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vim-wakatime'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nerdtree', 'nvim-treesitter'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")

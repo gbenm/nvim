@@ -127,3 +127,7 @@ use {
   ft = "tex",
 }
 
+use {
+  "wakatime/vim-wakatime",
+  event = "InsertEnter",
+}
