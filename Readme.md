@@ -1,7 +1,7 @@
 # Configuración para Neovim
 Esta configuración está hecha para Neovim 0.6.0
 
-# Configuración
+## Configuración
 La primera vez que se usa esta configuración se comenzará
 a instalar packer.nvim, probablemente pida un Enter de su
 teclado para continuar, posterior a eso se instalan los
@@ -16,4 +16,15 @@ tardar, pero es algo que se hace en background.
 - Fuente para los iconos: **DejaVu Sans Mono Bold Nerd Font Complete**
 - Lugar de instalación para Linux: ~/.local/share/fonts
 
-- Aun falta más explicación
+## Atajos
+La tecla líder (`<leader>`) es `;`, esto se puede cambiar desde
+`init.lua` justo en la primera línea.
+
+### Básicos
+- `;w` Guardar el archivo
+- `;q` Cerrar la ventana actual
+- `;wq` Guardar el buffer actual y Cerrar la ventana
+- `fd` Regresa al modo normal
+
+## Estructura del proyecto
+(Explicar orden y porqué de las carpetas)
