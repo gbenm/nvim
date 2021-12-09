@@ -1,14 +1,8 @@
 local keymap = require("tools.minimal").keymap
 
-local holdMode = function(mode)
-  return function (shorcut, command, opts)
-    keymap(mode, shorcut, command, opts)
-  end
-end
-
-local nmap = holdMode("n")
-local imap = holdMode("i")
-local vmap = holdMode("v")
+local nmap = keymap("n")
+local imap = keymap("i")
+local vmap = keymap("v")
 
 -- quitar los selecionados después de una búsqueda
 nmap("<Leader><C-l>", ":noh<CR>")
