@@ -1,6 +1,15 @@
-local tools = require('tools')
+local tools = require("tools.minimal")
 local opt = tools.opt
 local cmd = vim.cmd
+
+local opto = opt("o")
+--local optb = opt("b")
+
+--optb("smartindent", true)
+--opto("hidden", true)
+--opto("mouse", "a")
+--opto("ignorecase", true)
+--opto("scrolloff", 4)
 
 cmd 'syntax enable'
 cmd 'filetype on'
@@ -24,12 +33,8 @@ opt('w', 'cursorline', true)
 opt('w', 'colorcolumn', '90')
 opt('w', 'wrap', false)
 
-cmd [[
-highlight white cterm=inverse gui=inverse
-match white /\s\+$/
-autocmd FileType tex,txt,markdown setlocal spelllang=es,en
-autocmd FileType tex,txt,markdown setlocal spell
-autocmd Filetype * AnyFoldActivate
-set foldlevel=99
-au TextYankPost * lua vim.highlight.on_yank {on_visual = false}
-]]
+cmd "highlight white cterm=inverse gui=inverse"
+cmd [[match white /\s\+$/]]
+
+opto("foldmethod", "expr")
+opto("foldlevel", 99)

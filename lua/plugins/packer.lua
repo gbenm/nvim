@@ -1,4 +1,4 @@
-this = {}
+local this = {}
 local pattern = ".*/lua/plugins/init%.lua"
 
 function this.loadAndCompile()
@@ -10,7 +10,8 @@ function this.loadAndCompile()
 
   vim.cmd [[
     packadd packer.nvim
-    NVplugins
+    luafile %
+    NvPlugins
     PackerCompile
   ]]
 end

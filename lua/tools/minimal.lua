@@ -1,17 +1,22 @@
-local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
+local fn = require "tools.fn"
+local curry = fn.curry
+
 local tools = {};
 
-function tools.opt(scope, key, value)
+local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
+
+tools.opt = curry(function (scope, key, value)
   scopes[scope][key] = value
   if scope ~= 'o' then scopes['o'][key] = value end
-end
+end)
 
 -- Para mapear combinaciones de teclas
-function tools.keymap(mode, lhs, rhs, opts)
+tools.keymap = curry(function (mode, lhs, rhs, opts)
   local options = {noremap = true}
   if opts then options = vim.tbl_extend('force', options, opts) end
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+end, 3)
+
 
 -- Crear una nueva tabla fucionando
 -- más tablas

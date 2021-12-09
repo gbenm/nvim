@@ -1,36 +1,86 @@
 local packer = require("packer")
 local use = packer.use
+local use_rocks = packer.use_rocks
 
 packer.init()
-
 packer.config.git.clone_timeout = 600;
 packer.reset()
+
+use_rocks {"luafilesystem"}
+require("packer.luarocks").setup_paths()
+for file in require("lfs").dir("/home/benyamin") do
+  print(file)
+end
 
 -- Packer
 use { "wbthomason/packer.nvim", opt = true, }
 
 -- IDE
-use { 'neovim/nvim-lspconfig' }
-use { 'tami5/lspsaga.nvim' }
+use {
+  "neovim/nvim-lspconfig",
+  config = function()
+    print "LspConfig ?"
+    require "lsp"
+  end,
+  after = {"nvim-cmp", "cmp-nvim-lsp", "cmp_luasnip"}
+}
+
+use { "tami5/lspsaga.nvim" }
+
 use {
   "nvim-treesitter/nvim-treesitter",
-  run = ":TSUpdate"
+  run = ":TSUpdate",
+  event = "VimEnter",
+  config = function()
+    require("nvim-treesitter.configs").setup {
+      ensure_installed = "maintained",
+      highlight = {
+        enable = true,
+        disable = { "c", "rust" },
+        additional_vim_regex_highlighting = false,
+      },
+    }
+
+    vim.o["foldexpr"] = "nvim_treesitter#foldexpr()"
+  end
 }
+
 use {
-  "hrsh7th/nvim-compe",
+  "hrsh7th/nvim-cmp",
   config = function ()
-    require "plugins.nvim-compe"
+    require "plugins.nvim-cmp"
   end,
-  event = "InsertEnter *"
+  after = "nvim-autopairs"
 }
+
+use {
+  "hrsh7th/cmp-nvim-lsp",
+  after = "nvim-cmp",
+} -- LSP source for nvim-cmp
+
+use {
+  "saadparwaiz1/cmp_luasnip",
+  after = "nvim-cmp",
+} -- Snippets source for nvim-cmp
+
+use { "L3MON4D3/LuaSnip" } -- Snippets plugin
 
 -- Editor
 use { "editorconfig/editorconfig-vim" }
-use { "windwp/nvim-autopairs" }
+
+use {
+  "windwp/nvim-autopairs",
+  event = "VimEnter",
+  config = function()
+    require("nvim-autopairs").setup()
+  end
+}
+
 use { "easymotion/vim-easymotion" }
 use { "christoomey/vim-tmux-navigator" } -- moverse entre ventanas
 use { "scrooloose/nerdcommenter" }
 use { "lukas-reineke/indent-blankline.nvim" }
+
 use {
   "folke/todo-comments.nvim",
   requires = "nvim-lua/plenary.nvim",
@@ -38,6 +88,7 @@ use {
     require("todo-comments").setup {}
   end
 }
+
 use {
   "folke/trouble.nvim",
   requires = "kyazdani42/nvim-web-devicons",
@@ -45,6 +96,7 @@ use {
     require("trouble").setup {}
   end
 }
+
 use {
   "nvim-telescope/telescope.nvim",
   requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
@@ -55,17 +107,30 @@ use {
 ----------------------------------------
 use { "marko-cerovac/material.nvim" }
 use { "glepnir/dashboard-nvim" }
+
 use {
   "hoob3rt/lualine.nvim",
   requires = {"kyazdani42/nvim-web-devicons", opt = true}
 }
+
 use {
   "akinsho/nvim-bufferline.lua",
   requires = {"kyazdani42/nvim-web-devicons", opt = true}
 }
+
 use { "kyazdani42/nvim-web-devicons", opt = true }
 ----------------------------------------
 
-use { 'scrooloose/nerdtree', opt = true }
--- use { 'lervag/vimtex', opt = true } -- No funciona bien en opt
+use {
+  "scrooloose/nerdtree",
+  event = "VimEnter",
+  config = function ()
+    vim.g["NERDTreeQuitOnOpen"] = 1
+  end
+}
+
+use {
+  "lervag/vimtex",
+  ft = "tex",
+}
 
