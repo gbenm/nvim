@@ -19,7 +19,7 @@ function server.setup(config)
     else
         print [[
 Heey you need to install:
-    https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone)
+    https://github.com/sumneko/lua-language-server
         ]]
     end
 end

@@ -1,3 +1,9 @@
+# Configuración para Neovim
+Esta configuración está hecha para Neovim 0.6.0
+
+# Configuración
+La primera vez que se usa esta configuración
+
 Fuente para los iconos: **DejaVu Sans Mono Bold Nerd Font Complete**
 
 ~/.local/share/fonts

@@ -5,6 +5,18 @@ local tools = {};
 
 local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
 
+-- Ruta donde debe estar instalado packer
+-- **opt** porque no lo quiero tener cargado
+tools.packer_path = vim.fn.stdpath("data") .. "/site/pack/packer/opt/packer.nvim"
+
+tools.config_path = vim.fn.stdpath("config")
+
+-- Sirve para verificar que esté instalado packer
+function tools.has_packer()
+  return vim.fn.empty(vim.fn.glob(tools.packer_path)) > 0
+end
+
+
 tools.opt = curry(function (scope, key, value)
   scopes[scope][key] = value
   if scope ~= 'o' then scopes['o'][key] = value end
