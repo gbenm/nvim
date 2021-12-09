@@ -20,11 +20,19 @@ tardar, pero es algo que se hace en background.
 La tecla líder (`<leader>`) es `;`, esto se puede cambiar desde
 `init.lua` justo en la primera línea.
 
+Nota: `<c-n>` denota Ctrl+n, así con otras combinaciones. Los buffer
+en esta configuración son los que aparecen representados
+como pestañas.
+
+
 ### Básicos
 - `;w` Guardar el archivo
 - `;q` Cerrar la ventana actual
 - `;wq` Guardar el buffer actual y Cerrar la ventana
 - `fd` Regresa al modo normal
+- `<c-n>` Ir al siguiente buffer
+- `<c-p>` Ir al buffer anterior
+- `;bd` Cerrar el buffer actual
 
 ## Estructura del proyecto
 (Explicar orden y porqué de las carpetas)
