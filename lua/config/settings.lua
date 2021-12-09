@@ -3,38 +3,36 @@ local opt = tools.opt
 local cmd = vim.cmd
 
 local opto = opt("o")
---local optb = opt("b")
+local optb = opt("b")
+local optw = opt("w")
 
---optb("smartindent", true)
---opto("hidden", true)
---opto("mouse", "a")
---opto("ignorecase", true)
---opto("scrolloff", 4)
+cmd "syntax enable"
+cmd "filetype on"
 
-cmd 'syntax enable'
-cmd 'filetype on'
-opt('b', 'smartindent', true)
-opt('o', 'hidden', true)
-opt('o', 'mouse', 'a')
-opt('o', 'ignorecase', true)
-opt('o', 'scrolloff', 4 )
-opt('o', 'shiftround', true)
-opt('o', 'smartcase', true)
-opt('o', 'splitbelow', true)
-opt('o', 'splitright', true)
-opt('o', 'wildmode', 'list:longest')
-opt('o', 'clipboard','unnamed,unnamedplus')
-opt('o', 'history', 10000)
-opt('o', 'undofile', true)
-opt('o', 'undodir', vim.fn.stdpath('data') .. '/undodir')
-opt('w', 'number', true)
-opt('w', 'relativenumber', true)
-opt('w', 'cursorline', true)
-opt('w', 'colorcolumn', '90')
-opt('w', 'wrap', false)
+optb("smartindent", true)
+
+opto("hidden", true)
+opto("mouse", "a")
+opto("ignorecase", true)
+opto("scrolloff", 4)
+opto("shiftround", true)
+opto("smartcase", true)
+opto("splitbelow", true)
+opto("splitright", true)
+opto("wildmode", "list:longest")
+opto("clipboard", "unnamed,unnamedplus")
+opto("history", 10000)
+opto("undofile", true)
+opto("undodir", vim.fn.stdpath("data") .. "/undodir")
+opto("foldmethod", "expr")
+opto("foldlevel", 99)
+
+optw("number", true)
+optw("relativenumber", true)
+optw("cursorline", true)
+optw("colorcolumn", "90")
+optw("wrap", false)
 
 cmd "highlight white cterm=inverse gui=inverse"
 cmd [[match white /\s\+$/]]
 
-opto("foldmethod", "expr")
-opto("foldlevel", 99)
