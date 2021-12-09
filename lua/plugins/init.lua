@@ -1,16 +1,9 @@
 local packer = require("packer")
 local use = packer.use
-local use_rocks = packer.use_rocks
 
 packer.init()
 packer.config.git.clone_timeout = 600;
 packer.reset()
-
-use_rocks {"luafilesystem"}
-require("packer.luarocks").setup_paths()
-for file in require("lfs").dir("/home/benyamin") do
-  print(file)
-end
 
 -- Packer
 use { "wbthomason/packer.nvim", opt = true, }
@@ -48,7 +41,7 @@ use {
 use {
   "hrsh7th/nvim-cmp",
   config = function ()
-    require "plugins.nvim-cmp"
+    require "plugins.units.nvim-cmp"
   end,
   after = "nvim-autopairs"
 }

@@ -155,7 +155,7 @@ _G.packer_plugins = {
   },
   ["nvim-cmp"] = {
     after = { "cmp_luasnip", "cmp-nvim-lsp", "nvim-lspconfig" },
-    config = { "\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21plugins.nvim-cmp\frequire\0" },
+    config = { "\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27plugins.units.nvim-cmp\frequire\0" },
     load_after = {
       ["nvim-autopairs"] = true
     },
