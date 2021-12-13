@@ -19,7 +19,6 @@ use {
 use {
   "neovim/nvim-lspconfig",
   config = function()
-    print "LspConfig ?"
     require "lsp"
   end,
   after = {"nvim-cmp", "cmp-nvim-lsp", "cmp_luasnip"}
