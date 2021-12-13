@@ -10,6 +10,13 @@ use { "wbthomason/packer.nvim", opt = true, }
 
 -- IDE
 use {
+  "github/copilot.vim",
+  config = function ()
+    vim.g["copilot_no_tab_map"] = true
+  end
+}
+
+use {
   "neovim/nvim-lspconfig",
   config = function()
     print "LspConfig ?"
