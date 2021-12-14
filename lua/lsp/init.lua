@@ -82,6 +82,11 @@ require('lsp.servers.kotlinls').core(lspconfig, tools).setup {
   capabilities = capabilities,
 }
 
+require('lsp.servers.hls').core(lspconfig, tools).setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 local lspsaga = require 'lspsaga'
 
 lspsaga.setup { -- defaults ...
