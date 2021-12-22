@@ -101,6 +101,8 @@ use {
   requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
 }
 
+use { 'alvan/vim-closetag' }
+
 ----------------------------------------
 -- Plugins minimos para la apariencia --
 ----------------------------------------
