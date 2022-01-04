@@ -98,6 +98,11 @@ require('lsp.servers.cssls').core(lspconfig, tools).setup {
   capabilities = capabilities,
 }
 
+require('lsp.servers.eslint').core(lspconfig, tools).setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 local lspsaga = require 'lspsaga'
 
 lspsaga.setup { -- defaults ...
