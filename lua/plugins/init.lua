@@ -19,7 +19,6 @@ use {
 use {
   "neovim/nvim-lspconfig",
   config = function()
-    print "LspConfig ?"
     require "lsp"
   end,
   after = {"nvim-cmp", "cmp-nvim-lsp", "cmp_luasnip"}
@@ -102,6 +101,8 @@ use {
   requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
 }
 
+use { 'alvan/vim-closetag' }
+
 ----------------------------------------
 -- Plugins minimos para la apariencia --
 ----------------------------------------
@@ -123,7 +124,6 @@ use { "kyazdani42/nvim-web-devicons", opt = true }
 
 use {
   "scrooloose/nerdtree",
-  event = "VimEnter",
   config = function ()
     vim.g["NERDTreeQuitOnOpen"] = 1
   end

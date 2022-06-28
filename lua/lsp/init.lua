@@ -25,6 +25,7 @@ end
 
 local lspconfig = require "lspconfig"
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 require("lsp.servers.nlua").core(lspconfig, tools).setup {
@@ -78,6 +79,26 @@ require('lsp.servers.yamlls').core(lspconfig, tools).setup {
 }
 
 require('lsp.servers.kotlinls').core(lspconfig, tools).setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require('lsp.servers.hls').core(lspconfig, tools).setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require('lsp.servers.htmlls').core(lspconfig, tools).setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require('lsp.servers.cssls').core(lspconfig, tools).setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require('lsp.servers.eslint').core(lspconfig, tools).setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
