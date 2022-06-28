@@ -124,7 +124,6 @@ use { "kyazdani42/nvim-web-devicons", opt = true }
 
 use {
   "scrooloose/nerdtree",
-  event = "VimEnter",
   config = function ()
     vim.g["NERDTreeQuitOnOpen"] = 1
   end
